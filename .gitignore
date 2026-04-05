@@ -1,7 +1,53 @@
+# Dataset/cache + outputs
+data_cache/
+outputs/
+*.zip
+*.tar
+*.tar.gz
+*.7z
+
+# Legacy/local folders
 datasets/
 env/
 app/piper/
-# model_training/depth_estimation/model_weights
-*/__pycache__/
-*/.log/
 Depth-Anything-V2/
+
+# Python + notebook
+*.pyo
+*.pyc
+**/__pycache__/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.ipynb_checkpoints/
+.venv/
+venv/
+
+# OS/editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Runtime/model artifacts
+*.wav
+*.mp3
+*.tmp
+*.temp
+*.log
+*.mp4
+*.avi
+app/performance_runs/
+
+# Metrics/plots (generated)
+*_metrics.csv
+*_metrics.json
+*latency*.png
+*benchmark_comparison.*
+
+# Secrets / local machine config
+.env
+kaggle.json
+~/.kaggle/

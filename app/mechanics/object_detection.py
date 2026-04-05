@@ -1,4 +1,7 @@
-import cv2
+try:
+	import cv2
+except Exception:  # pragma: no cover
+	cv2 = None
 from ultralytics import YOLO
 
 
@@ -50,6 +53,8 @@ def draw_centered_label(
 	padding=4,
 ):
 	"""Draw text centered around a point with a filled background for readability."""
+	if cv2 is None:
+		return
 	font = cv2.FONT_HERSHEY_SIMPLEX
 	thickness = 1
 	(text_w, text_h), baseline = cv2.getTextSize(text, font, font_scale, thickness)
